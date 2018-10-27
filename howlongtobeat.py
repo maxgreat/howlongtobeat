@@ -13,7 +13,7 @@ def debugPrint(mess):
 	if DEBUG:
 		print(mess)
 
-def findTimes(title):
+def findMainTimes(title):
 	s_query = ' '.join([title, 'howlongtobeat'])
 	debugPrint("Looking for playing time :")
 	debugPrint(s_query)
@@ -40,7 +40,7 @@ def howlongtobeat(fileName='Games.tsv', test=False):
 		lines = lines[1:]
 
 		if test:
-			print(findTimes(lines[0].split('\t')[0]))
+			print(findMainTimes(lines[0].split('\t')[0]))
 			return
 		
 		for line in lines:	
