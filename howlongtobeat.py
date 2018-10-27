@@ -30,7 +30,7 @@ def findMainTimes(title):
 		title = li_tag.find('h5').text.strip()
 		play_time = li_tag.find('div').text.strip()
 		game_time_list.append(play_time)
-	return int(game_time_list[0].split(' ')[0])
+	return float(game_time_list[0].split(' ')[0])
 
 
 
